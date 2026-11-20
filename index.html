@@ -1,17 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Website</title>
+    <title>কামরুজ্জামান | পোর্টফোলিও</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 100px; background-color: #e3fafc; }
-        h1 { color: #0b7285; }
-        p { color: #495057; font-size: 18px; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #1e293b;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #38bdf8;
+        }
+        header h1 {
+            color: #38bdf8;
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+        }
+        header p {
+            color: #94a3b8;
+            font-size: 1.1rem;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .section {
+            background-color: #1e293b;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            color: #38bdf8;
+            border-bottom: 2px solid #334155;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .skill-tag {
+            background-color: #334155;
+            color: #f8fafc;
+            text-align: center;
+            padding: 10px;
+            border-radius: 8px;
+            font-weight: 500;
+            border: 1px solid #475569;
+        }
+        .project-card {
+            background-color: #334155;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid #38bdf8;
+        }
+        .project-card h3 {
+            color: #f1f5f9;
+            margin-bottom: 5px;
+        }
+        .project-card p {
+            color: #cbd5e1;
+        }
+        .contact-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #38bdf8;
+            color: #0f172a;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background-color: #7dd3fc;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #64748b;
+            margin-top: 40px;
+        }
     </style>
 </head>
 <body>
-    <h1>আলহামদুলিল্লাহ! আমার নতুন ওয়েবসাইট লাইভ হয়েছে।</h1>
-    <p>এটি কামরুজ্জামান ভাইয়ের গিটহাব পেজেস দিয়ে তৈরি করা প্রথম ফ্রি সাইট।</p>
+
+    <header>
+        <h1>মোঃ কামরুজ্জামান</h1>
+        <p>ওয়েব ডেভলপার | প্রোগ্রামার | টেক এনথুজিয়াস্ট</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- নিজের সম্পর্কে -->
+        <div class="section">
+            <h2>আমার সম্পর্কে</h2>
+            <p>হ্যালো! আমি কামরুজ্জামান। আমি একজন প্যাশনেট ওয়েব ডেভলপার। নতুন নতুন টেকনোলজি শেখা এবং তা দিয়ে বাস্তবমুখী সমস্যার সমাধান করতে আমি পছন্দ করি। আমি গিটহাব পেজেস ব্যবহার করে আমার এই পার্সোনাল পোর্টফোলিও ওয়েবসাইটটি তৈরি করেছি।</p>
+        </div>
+
+        <!-- দক্ষতা বা স্কিলস -->
+        <div class="section">
+            <h2>দক্ষতা (Skills)</h2>
+            <div class="skills-grid">
+                <div class="skill-tag">HTML5</div>
+                <div class="skill-tag">CSS3</div>
+                <div class="skill-tag">JavaScript</div>
+                <div class="skill-tag">GitHub</div>
+                <div class="skill-tag">Responsive Design</div>
+                <div class="skill-tag">Web Hosting</div>
+            </div>
+        </div>
+
+        <!-- প্রোজেক্টসমূহ -->
+        <div class="section">
+            <h2>আমার প্রোজেক্টসমূহ</h2>
+            <div class="project-card">
+                <h3>১. প্রথম ফ্রি ওয়েবসাইট</h3>
+                <p>গিটহাব পেজেস (GitHub Pages) ব্যবহার করে তৈরি করা একটি সম্পূর্ণ রেসপন্সিভ পার্সোনাল পোর্টফোলিও সাইট।</p>
+            </div>
+            <div class="project-card">
+                <h3>২. আপকামিং প্রোজেক্ট</h3>
+                <p>খুব শীঘ্রই এখানে আমার তৈরি করা নতুন নতুন ওয়েব অ্যাপ্লিকেশনের বিবরণ যুক্ত করা হবে।</p>
+            </div>
+        </div>
+
+        <!-- যোগাযোগ -->
+        <div class="section">
+            <h2>যোগাযোগ করুন</h2>
+            <p style="margin-bottom: 20px;">আপনার কোনো প্রশ্ন থাকলে বা কোনো প্রজেক্ট নিয়ে আলোচনা করতে চাইলে আমার সাথে যোগাযোগ করতে পারেন।</p>
+            <div class="contact-links">
+                <a href="mailto:your-email@example.com" class="btn">ইমেইল করুন</a>
+                <a href="https://github.com" target="_blank" class="btn" style="background-color: #475569; color: white;">গিটহাব প্রোফাইল</a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 কামরুজ্জামান. অল রাইটস রিজার্ভড।</p>
+    </footer>
+
 </body>
 </html>
+
