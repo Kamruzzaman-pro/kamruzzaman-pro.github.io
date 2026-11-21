@@ -144,30 +144,33 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact section-padding gray-bg">
-        <div class="container">
-            <div class="section-title">
-                <h2>Get In Touch</h2>
-                <p>Let's Start a Conversation</p>
-            </div>
-            <div class="contact-wrapper">
-                <form id="contactForm" class="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn">Send Message</button>
-                    <div id="formAlert" class="alert hidden"></div>
-                </form>
-            </div>
+   <!-- Contact Section -->
+<section id="contact" class="contact section-padding gray-bg">
+    <div class="container">
+        <div class="section-title">
+            <h2>Get In Touch</h2>
+            <p>Let's Start a Conversation</p>
         </div>
-    </section>
+        <div class="contact-wrapper">
+            <!-- ফর্মের অ্যাকশনে আপনার মেইলটি ইন্টিগ্রেট করা হয়েছে এবং name অ্যাট্রিবিউট যুক্ত করা হয়েছে -->
+            <form id="contactForm" class="contact-form" action="https://formspree.io" method="POST">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+                <div id="formAlert" class="alert success hidden" style="margin-top: 20px;">
+                    Thank you! Your message has been sent successfully.
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer>
