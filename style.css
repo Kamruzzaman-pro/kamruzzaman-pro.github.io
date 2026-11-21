@@ -163,7 +163,10 @@ header {
 .hero-content p {
     font-size: 1.1rem;
     margin-bottom: 30px;
-    opacity: 0.9;
+    color: rgba(255, 255, 255, 0.9); /* ওপাোসিটি বাদ দিয়ে সরাসরি কালার মোড */
+    -webkit-font-smoothing: antialiased; /* ফন্টকে শার্প করার জন্য */
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 .hero-contact {
