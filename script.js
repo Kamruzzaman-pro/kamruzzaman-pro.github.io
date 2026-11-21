@@ -31,24 +31,59 @@ const observer = new IntersectionObserver((entries) => {
 
 observer.observe(aboutSection);
 
-// Simple Contact Form Handling
+// Contact Form Handling (Sends real emails via Formspree)
 const contactForm = document.getElementById('contactForm');
 const formAlert = document.getElementById('formAlert');
 
-contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
+contactForm.addEventListener('submit', async function(e) {
+    e.preventDefault(); // পেজ রিফ্রেশ হওয়া বন্ধ করবে
     
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const message = document.getElementById('message').value;
 
-    if(name && email && message) {
-        // ফর্ম সফলভাবে সাবমিট দেখানোর মেসেজ
-        formAlert.textContent = "Thank you! Your message has been sent successfully.";
-        formAlert.className = "alert success";
-        contactForm.reset();
-    } else {
+    // ভ্যালিডেশন চেক
+    if(!name || !email || !message) {
         formAlert.textContent = "Please fill in all fields.";
         formAlert.className = "alert error";
+        formAlert.classList.remove('hidden');
+        return;
+    }
+
+    const formData = new FormData(contactForm);
+    
+    try {
+        // ফর্মস্প্রিতে ডাটা পাঠাচ্ছে
+        const response = await fetch(contactForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+        
+        if (response.ok) {
+            // সফলভাবে মেইল চলে গেলে
+            formAlert.textContent = "Thank you! Your message has been sent successfully.";
+            formAlert.className = "alert success";
+            formAlert.classList.remove('hidden');
+            contactForm.reset(); // ইনপুট বক্স খালি করার জন্য
+            
+            // ৫ সেকেন্ড পর সাকসেস মেসেজটি অটোমেটিক গায়েব হয়ে যাবে
+            setTimeout(() => {
+                formAlert.classList.add('hidden');
+            }, 5000);
+        } else {
+            // কোনো সার্ভার সমস্যা হলে
+            formAlert.textContent = "Oops! Something went wrong. Please try again.";
+            formAlert.className = "alert error";
+            formAlert.classList.remove('hidden');
+        }
+    } catch (error) {
+        // ইন্টারনেট কানেকশন না থাকলে
+        formAlert.textContent = "Network error! Please check your internet connection.";
+        formAlert.className = "alert error";
+        formAlert.classList.remove('hidden');
     }
 });
+
