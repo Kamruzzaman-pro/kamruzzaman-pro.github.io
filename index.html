@@ -151,24 +151,30 @@
             <h2>Get In Touch</h2>
             <p>Let's Start a Conversation</p>
         </div>
-        <div class="contact-wrapper">
-            <!-- ফর্মের অ্যাকশনে আপনার মেইলটি ইন্টিগ্রেট করা হয়েছে এবং name অ্যাট্রিবিউট যুক্ত করা হয়েছে -->
-            <form id="contactForm" class="contact-form" action="https://formspree.io/f/moedngjq" method="POST">
-                <div class="form-group">
-                    <input type="text" id="name" name="name" placeholder="Your Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" id="email" name="email" placeholder="Your Email" required>
-                </div>
-                <div class="form-group">
-                    <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-                </div>
-                <button type="submit" class="btn">Send Message</button>
-                <div id="formAlert" class="alert success hidden" style="margin-top: 20px;">
-                    Thank you! Your message has been sent successfully.
-                </div>
-            </form>
+       <div class="contact-wrapper">
+    <!-- ১. অ্যাকশন লিংক পরিবর্তন করে Web3Forms-এর লিংক দেওয়া হয়েছে -->
+    <form id="contactForm" class="contact-form" action="https://web3forms.com" method="POST">
+        
+        <!-- ২. আপনার অ্যাক্সেস কী (Access Key) এখানে যুক্ত করা হয়েছে -->
+        <input type="hidden" name="access_key" value="c5fdcbcb-ac0b-4dd5-b58f-419a83a209a7">
+
+        <div class="form-group">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
         </div>
+        <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn">Send Message</button>
+        
+        <div id="formAlert" class="alert success hidden" style="margin-top: 20px;">
+            Thank you! Your message has been sent successfully.
+        </div>
+    </form>
+</div>
+
     </div>
 </section>
 
