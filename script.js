@@ -204,12 +204,11 @@ if (contactForm && formAlert) {
 
 
 
-
-// অটোমেটিক কারেন্ট বছর লোড করার স্ক্রিপ্ট
 document.addEventListener("DOMContentLoaded", function () {
     const footerYear = document.getElementById("f_year");
     if (footerYear) footerYear.textContent = new Date().getFullYear();
 });
+
 
 
 
