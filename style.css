@@ -398,156 +398,31 @@ footer {
 
 
 
-/* ==========================================================================
-   Premium Footer Custom Styles
-   ========================================================================== */
-.premium_footer {
-  background-color: #0d1117; 
-  color: #8b949e;
-  font-family: sans-serif;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  padding: 60px 0 20px 0;
+/* আপনার ফুটারের সোশ্যাল আইকনগুলোকে আরও সুন্দর করার জন্য */
+footer .socials {
+    display: flex;
+    gap: 12px;
 }
 
-.premium_footer .container {
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 15px;
+footer .socials a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05); /* হালকা ব্যাকগ্রাউন্ড */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px; /* চারকোনা বক্স শেপ */
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
-.footer_core {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
-  padding-bottom: 40px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.footer_widget {
-  flex: 1;
-  min-width: 250px;
-}
-
-.footer_widget h4 {
-  color: #f0f6fc;
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.footer_logo {
-  color: #ffffff;
-  font-size: 24px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  margin: 0 0 15px 0;
-}
-
-.footer_logo span {
-  color: #58a6ff; 
-}
-
-.footer_bio {
-  font-size: 14px;
-  line-height: 1.6;
-  color: #8b949e;
-}
-
-.dev_status {
-  font-size: 13px;
-  color: #58a6ff;
-  display: inline-flex;
-  align-items: center;
-  margin-top: 10px;
-  background: rgba(88, 166, 255, 0.1);
-  padding: 6px 14px;
-  border-radius: 20px;
-}
-
-.status_dot {
-  width: 8px;
-  height: 8px;
-  background-color: #3fb950;
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 8px;
-  box-shadow: 0 0 8px #3fb950;
-}
-
-.tech_tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.tech_tags span {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 6px 14px;
-  font-size: 13px;
-  color: #c9d1d9;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-}
-
-.tech_tags span:hover {
-  background: rgba(88, 166, 255, 0.1);
-  border-color: #58a6ff;
-  color: #58a6ff;
-}
-
-.footer_socials {
-  display: flex;
-  gap: 12px;
-}
-
-.footer_socials a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 8px;
-  color: #c9d1d9;
-  font-size: 18px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.footer_socials a:hover {
-  background: #58a6ff;
-  color: #ffffff;
-  transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(88, 166, 255, 0.3);
-}
-
-.footer_bottom {
-  text-align: center;
-  padding-top: 20px;
-}
-
-.footer_bottom p {
-  font-size: 13px;
-  margin: 0;
-  color: #8b949e;
-}
-
-@media (max-width: 768px) {
-  .footer_core {
-    flex-direction: column;
-    gap: 35px;
-  }
-}
-
-
-
-
-
-    
-    .menu-toggle { display: block; }
+/* মাউস নিলে আইকনটি একটু উপরে উঠবে এবং আপনার থিম কালার (অরেঞ্জ) হবে */
+footer .socials a:hover {
+    background: #ff6b35; 
+    color: #ffffff;
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
 }
