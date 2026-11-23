@@ -163,8 +163,8 @@ header {
 .hero-content p {
     font-size: 1.1rem;
     margin-bottom: 30px;
-    color: rgba(255, 255, 255, 0.9); /* ওপাোসিটি বাদ দিয়ে সরাসরি কালার মোড */
-    -webkit-font-smoothing: antialiased; /* ফন্টকে শার্প করার জন্য */
+    color: rgba(255, 255, 255, 0.9);
+    -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
 }
@@ -241,7 +241,7 @@ header {
 .progress {
     background-color: var(--primary-color);
     height: 100%;
-    width: 0; /* Dynamic loading via JS */
+    width: 0;
     transition: width 1.5s ease-in-out;
 }
 
@@ -353,32 +353,6 @@ header {
 .alert.error { background: #f8d7da; color: #721c24; }
 .hidden { display: none; }
 
-/* Footer */
-footer {
-    background: var(--text-color);
-    color: var(--white);
-    padding: 40px 0;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.socials a {
-    color: var(--white);
-    margin-left: 15px;
-    font-size: 1.2rem;
-    transition: color 0.3s;
-}
-
-.socials a:hover {
-    color: var(--primary-color);
-}
-
 /* Responsive Breakpoints */
 @media (max-width: 992px) {
     .hero-wrapper { flex-direction: column-reverse; text-align: center; }
@@ -390,20 +364,34 @@ footer {
     .nav-links { display: none; width: 100%; flex-direction: column; background: var(--white); position: absolute; top: 70px; left: 0; box-shadow: 0 5px 5px rgba(0,0,0,0.05); }
     .nav-links.active { display: flex; }
     .nav-links li a { display: block; padding: 15px; text-align: center; }
-
-
-
-
-
-
-
-/* ফুটার ব্যাকগ্রাউন্ড সম্পূর্ণ কালো করার জন্য */
-footer {
-    background-color: #000000 !important; /* এটি ফুটারকে কুচকুচে কালো করবে */
-    padding: 40px 0; /* ফুটারের ওপর এবং নিচে সুন্দর স্পেস তৈরি করবে */
+    .menu-toggle { display: block; }
+    .footer-content { flex-direction: column; text-align: center; }
 }
 
-/* আপনার ফুটারের সোশ্যাল আইকনগুলোকে আরও সুন্দর করার জন্য */
+/* ==========================================
+   Premium Black Footer Section 
+========================================== */
+footer {
+    background-color: #000000 !important; /* কুচকুচে কালো ব্যাকগ্রাউন্ড */
+    color: #ffffff;
+    padding: 40px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+/* সোশ্যাল আইকন বক্স স্টাইল */
 footer .socials {
     display: flex;
     gap: 12px;
@@ -415,20 +403,20 @@ footer .socials a {
     justify-content: center;
     width: 40px;
     height: 40px;
-    background: rgba(255, 255, 255, 0.1); /* কালো ব্যাকগ্রাউন্ডে আইকন বক্সটি চেনার জন্য হালকা সাদা শেড */
+    background: rgba(255, 255, 255, 0.1); /* কালো ব্যাকগ্রাউন্ডে আইকন বক্স দৃশ্যমান করার জন্য */
     border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 8px; /* চারকোনা বক্স শেপ */
+    border-radius: 8px; /* আধুনিক চারকোনা কার্ভ বক্স */
     color: #ffffff;
     font-size: 16px;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
-/* মাউস নিলে আইকনটি একটু উপরে উঠবে এবং আপনার থিম কালার (অরেঞ্জ) হবে */
+/* মাউস হোভার অ্যানিমেশন */
 footer .socials a:hover {
-    background: #ff6b35; 
+    background-color: var(--primary-color); /* আপনার থিম কালার অরেঞ্জ হবে */
     color: #ffffff;
-    transform: translateY(-4px);
-    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+    transform: translateY(-4px); /* বক্সটি একটু ওপরে উঠবে */
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.4);
 }
 
